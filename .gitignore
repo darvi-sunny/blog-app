@@ -34,3 +34,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/.vs/blog-app/FileContentIndex/e4bb6892-c34f-4c2a-aa8b-246f5fa110c2.vsidx
