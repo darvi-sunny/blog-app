@@ -1,0 +1,32 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+//Define Model- Map tables against database
+model Membership {
+  id        Int      @id @default(autoincrement())
+  username  String
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogEntry {
+  id                Int      @id @default(autoincrement())
+  title             String
+  introduction  String
+  description       String
+  authorname            String
+  authortitle       String
+  isPublished       Boolean
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
